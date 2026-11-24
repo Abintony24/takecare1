@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: takecare-deployment
+  namespace: takecare
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: takecare
+  template:
+    metadata:
+      labels:
+        app: takecare
+    spec:
+      containers:
+        - name: takecare
+          image: abintony/takecare:latest
+          ports:
+            - containerPort: 8000
