@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: takecare
-          image: abintony/takecare:latest
+          image: abintony/takecare:1
           ports:
             - containerPort: 8000
